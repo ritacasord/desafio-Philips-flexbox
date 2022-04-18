@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos Flex Shrink</title>
+    <style>
+        .flex-container {
+            display: flex;
+            border: 1px solid black;
+            max-width: 350px;
+        }
+        .item {
+            background-color: orangered;
+            font-size: 24px;
+            text-align: center;
+            margin: 5px;
+            margin-bottom: 10px;
+        }
+        .s-1 {
+            flex-shrink: 1;
+        }
+        .fg-1 {
+            flex-grow: 1;
+        }
+        .s-0 {
+            flex-shrink: 0;
+            flex-basis: 200px;
+            
+        }
+        .s-2 {
+            flex-shrink: 2;
+            flex-basis: 100px;
+            
+        }
+        .s-3 {
+            flex-shrink: 3;
+            flex-basis: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex-Shrink: 1</p>
+    <di class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">B</div>
+        <div class="item s-1 fg-1">C</div>
+        <div class="item s-1 fg-1">D</div>
+        <div class="item s-1 fg-1">E</div>
+    </di>
+    <di class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">Rita Ordonho</div>
+        <div class="item s-1 fg-1">Rita de Cássia de Oliveira</div>
+        <div class="item s-1 fg-1">Rita de Cássia de Oliveira Ordonh</div>
+        <div class="item s-1 fg-1">E</div>
+        <div class="item s-1 fg-1">E</div>
+    </di>
+    <p>flex Shrink: 0 / basis </p>
+    <di class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-1 fg-1">Rita Ordonho</div>
+        <div class="item s-1 fg-1">Rita de CAssia </div>
+        <div class="item s-1 fg-1">Rita </div>
+    </di>
+    <p>flex Shrink: mix  / basis </p>
+    <di class="flex-container">
+        <div class="item s-1 fg-1">A</div>
+        <div class="item s-2 fg-1">the generated</div>
+        <div class="item s-2 fg-1">C </div>
+        <div class="item s-3 fg-1">D </div>
+    </di>
+</body>
+</html>
